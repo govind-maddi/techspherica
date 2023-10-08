@@ -2,6 +2,8 @@
 
 TechSpherica is a tech blog web application developed from scratch using React.js and a variety of other technologies. It provides a platform for users to share their knowledge and insights on technology-related topics, fostering a community of tech enthusiasts.
 
+#Live Link - https://techspherica.netlify.app/
+
 ## Technologies Used
 
 TechSpherica utilizes the following technologies to run:
