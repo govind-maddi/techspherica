@@ -1,0 +1,22 @@
+.pinblog_cont{
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 100px;
+    place-items: center;
+}
+.pinblog_cont > figure{
+    width: 100%;
+    height: 100%;
+}
+.pinblog_cont > figure > img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.pinblog_cont > section{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}

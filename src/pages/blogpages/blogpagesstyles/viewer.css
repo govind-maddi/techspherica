@@ -1,0 +1,118 @@
+#viewer_cont{
+    max-width: 1024px;
+    background-color: #fffafb;
+    margin: 1.6rem auto;
+}
+#blog_info_container{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 150px;
+    justify-content: space-between;
+    padding: 10px 10px;
+    position: relative;
+}
+#blogger_info{
+    display: flex;
+    color: #122832;
+    align-items: center;
+    column-gap: 10px;
+}
+#blogger_profile_cont{
+    width: 150px;
+    height: 150px;
+    display: flex;
+}
+#blogger_profile_cont > img{
+    width: 100%;
+    border-radius: 50%;
+}
+#blogger{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    position: relative;
+    bottom: 2px;
+}
+#blogger_name{
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+}
+#blogger_name::after{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #b5df53;
+    position: relative;
+    left: 2px;
+    opacity: 0.8;
+}
+#blogger_misc{
+    font-size: 18px;
+    font-weight: 500;
+}
+#blogbtns {
+    /* background-color: #B5DF53;/* #11262e */
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    align-content: space-evenly;
+    column-gap: 15px;
+}
+#blogbtns > button{
+    background-color: #b5df53;
+    color: #122832;
+    border: none;
+    font-family: 'figtree',sans-serif;
+    padding: 6px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#blogbtns > button > i{
+    font-size: 20px;
+    margin-left: 10px;
+}
+#stroke{
+    width: calc(100% - 10px);
+    display: block;
+    height: 3px;
+    background-color: #11262e;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+#blog_content_container{
+    max-height: 600px;
+    color: #122832;
+    padding: 5px 10px;
+    position: relative;
+    overflow-y: scroll;
+}
+#blog_content_container::after{
+    content: '';
+    display: block;
+    
+}
+@media screen and (max-width: 700px) {
+    #blog_info_container{
+        grid-template-columns: 100%;
+        grid-template-rows: 150px auto;
+    }
+    #blogger_profile_cont{
+        width: 100px;
+        height: 100px;
+    }
+    #blogger_name{
+        font-size: 20px;
+    }
+    #blogger_misc{
+        font-size: 16px;
+    }
+    #blogbtns{
+       
+        grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
+    grid-template-rows: none;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+  }

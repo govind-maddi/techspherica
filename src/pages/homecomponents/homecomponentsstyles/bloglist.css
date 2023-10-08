@@ -1,0 +1,63 @@
+.slick-slide{
+
+}
+.slick-slide > div{
+    width: 300px;
+    padding: 10px;
+    margin: 0 auto;
+    height: 450px;
+}
+.slick-slide > div > div{
+    width: 100%;
+    height: 100%;
+    background: rgb(17,38,46);
+    background: linear-gradient(302deg, rgba(17,38,46,1) 0%, rgba(26,46,54,1) 0%, rgba(17,38,46,1) 46%, rgba(66,81,88,1) 100%, rgba(100,112,118,1) 100%, rgba(255,250,251,1) 100%);
+    display: grid;
+    grid-template-rows: 200px 170px 50px;
+    /* row-gap: 16px; */
+    place-items: center;
+    align-content: space-between;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+}
+ 
+
+@media screen and (max-width:768px){
+    .slick-slide > div{
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width:418px) {
+    .slick-slide > div {
+        width: 230px;
+        height: 480px;
+    }
+    .slick-slide > div > div {
+        grid-template-rows: 200px 200px 50px;
+        grid-template-columns: 100%;
+    }
+    .blogcard_img > img{
+        object-fit: cover;
+    }
+    .blogcard_info {
+        padding: 5px 5px 0px 10px;
+        height: 100%;
+    }
+    .readmore_btn{
+        top: 400px;
+    }
+    .blogger{
+        width: 120px;
+    }
+}
+
+@media screen and (max-width:340px) {
+    .slick-slide > div{
+        width: 200px;
+    }
+    .slick-slide > div > div{
+        grid-template-rows: 200px 230px 50px;
+    }
+}

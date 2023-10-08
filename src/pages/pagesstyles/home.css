@@ -1,0 +1,112 @@
+#main_home_cont{
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    margin-top: 1.2rem;
+    row-gap: 100px;
+}
+#hero{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    height: calc(90vh - 102.58px);
+}
+#hero_cont_headers{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#hero_cont_headers > header{
+    font-size: 30px;
+    font-weight: 500;
+    word-spacing: 5px;
+    margin-bottom: 10px;
+}
+#hero_cont_headers > article{
+    font-weight: 300;
+    width: 85%;
+    margin-bottom: 2rem;
+    word-spacing: 5px;
+}
+#hero_cont_headers > button{
+    background-color: #B5DF53;
+    border:none;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #0c1518;
+    padding: 10px 1.6rem;
+    border-radius: 20px;
+    font-family: inherit;
+    width: fit-content;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+#hero_cont_headers > button > span{
+    position: relative;
+    left: 11px;
+    transition: left 0.3s ease;
+}
+#hero_cont_headers > button > img{
+    width: 18px;
+    height: 18px;
+    padding-left: 10px;
+    position: relative;
+    opacity: 0;
+    right: 10px;
+    transition: all 0.2s ease;
+}
+
+#hero_cont_headers > button:hover > span{
+    left: 0px;
+} 
+
+#hero_cont_headers > button:hover > img{
+    opacity: 1;
+    right: 0px;
+}
+
+#hero_cont_gif{
+    background: inherit;
+    display: flex;
+
+}
+#hero_cont_gif > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: lighten;
+    object-position: left;
+
+}
+#topicks,#reviews,#trending{
+    position: relative;
+}
+#toppicks > header ,#trending > header ,#reviews > header{
+    font-size: 30px;
+    font-weight: 500;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#toppicks > article ,#trending > article ,#reviews > article{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width:768px) {
+    #hero_cont_gif{
+        display: none;
+    }
+    #hero{
+        grid-template-columns: auto;
+    }
+}
+
+

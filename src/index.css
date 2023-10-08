@@ -1,0 +1,50 @@
+html{
+  font-size:16px
+}
+/* @font-face {
+  font-family: 'Proxima Nova Soft W03 Regular';
+  src: url('./assets/fonts/FontsFree-Net-Proxima-Nova-Soft-W03-Regular.ttf');
+} */
+*{
+  font-family: 'Figtree', sans-serif;
+}
+body {
+  margin: 0;
+  /* font-family: 'Poppins', sans-serif; */
+  color: #FFFAFB;
+  font-weight: 400; 
+  padding: 0 25px;
+  scroll-behavior: smooth;
+  position: relative;
+}
+body::before{
+  content: "";
+  position: fixed; /* This will make it scroll with the content */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1; /* This will place it behind your content */
+  background: linear-gradient(180deg, rgba(18,41,50,1) 23%, rgba(14,14,14,1) 100%);
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+figure{
+  margin: 0;
+}
+input:focus{
+  outline: none;
+}
+p{
+  margin: 0rem;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style-type: none;
+}

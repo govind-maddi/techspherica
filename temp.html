@@ -1,0 +1,525 @@
+<!-- 
+    
+    
+    
+    
+    const bloglist = [
+    {
+        img:{python},
+        title:'Pyhton Language Of Future',
+        desc:"Python's versatility and ease of use make it the driving force behind tech innovations. From artificial intelligence to web development, Python is poised to shape the future of the tech industry, making it a must-learn language for aspiring programmers and tech enthusiasts.",
+        blogger:'Mark Thompson',
+        views:'290',
+        likes:'30',
+    },
+    {
+        img:{vr},
+        title:'Transforming Realities',
+        desc:"Virtual reality (VR) is revolutionizing how we experience the world. From gaming to education and healthcare, VR immerses users in digital environments, blurring the lines between reality and imagination. This technology's potential is limitless, reshaping industries and unlocking new realms of possibility.",
+        blogger:'Elizabeth Walker',
+        views:'100',
+        likes:'70',
+    },
+    {
+        img:{ai},
+        title:'Unlocking the Power of AI',
+        desc:"Artificial Intelligence (AI) is revolutionizing industries, from healthcare to finance. Discover how AI's machine learning and deep learning algorithms are driving automation, efficiency, and insights, paving the way for a future where technology and human intelligence converge for unparalleled advancements.",
+        blogger:'Jay Rathod',
+        views:'2290',
+        likes:'100',
+    },
+    {
+        img:{bitcoin},
+        title:'Bitcoin: Digital Gold Curse or Boon',
+        desc:"Bitcoin, the pioneer of cryptocurrencies, continues to redefine finance. Its decentralized nature and limited supply have attracted investors worldwide. As it gains mainstream acceptance, understanding its potential and risks becomes increasingly vital. Explore the evolution and impact of Bitcoin in the financial landscape.",
+        blogger:'Erik Johansson',
+        views:'340',
+        likes:'50',
+    },
+    
+]
+    
+    
+    
+    /* eslint-disable react/prop-types */
+import React from 'react'
+
+function Blogcard( {blog} ) {
+  return (
+    <>
+        <figure>
+            <img src={blog.img} alt="blog img" />
+        </figure>
+        <section>
+            <header>{blog.title}</header>
+            <article>{blog.desc}</article>
+        </section>
+        <section>
+            <span>{blog.blogger}</span>
+            <span>{blog.views}</span>
+            <span>{blog.likes}</span>
+        </section>
+    </>
+  )
+}
+
+export default Blogcard;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id='main_cont_home'>
+
+        {/* ------------------------------------------------------------------------------------------------- */}
+        <div id='hero_banner'>
+            <section id='hero_banner_text'>
+                <header>
+                    Discover, Explore, Share, <span style={{color:'#B5DF53'}}>Innovate</span> <br/>and Thrive.
+                </header>
+                
+                <article>
+                    Embark on a technical voyage. Explore innovation, share insights, collaborate, lead boldy, and thrive in our vibrant online tech community.
+                </article>
+
+                <section>
+                    <input type="text" placeholder='Embark'/>
+                    <i style={{color:'#B5DF53',fontSize:'30px'}} className="ri-arrow-right-circle-fill"></i>
+                </section>
+
+                <Button value='Search'/>
+
+                <span></span>
+            </section>
+            <figure id='hero_banner_gif'>
+                <img src={techparticlesgif} alt={techparticlesgif}/>
+            </figure>
+        </div>
+        {/* ------------------------------------------------------------------------------------------------- */}
+
+        <div id='toppicks'>
+            <section>
+                {/* splide component */}
+            </section>
+        </div>
+
+        <div id='trending'>
+            <section>
+                {/* trending tags */}
+            </section>
+        </div>
+
+        {/* ------------------------------------------------------------------------------------------------- */}
+        <div id='aboutus'>
+            <header id='aboutus_header'>
+                <span className='leftstroke'></span>
+                <label>About Us</label>
+                <span className='rightstroke'></span>
+            </header>
+
+            <section id='aboutus_info'>
+                <figure id='network_img'>
+                    <img src={network} alt={network} />
+                </figure>
+                <figure id='group_img'>
+                    <span></span>
+                    <img src={group} alt={group} />
+                </figure>
+                <label><span style={{color:'#fffafb'}}>&quot;</span> Who we are <span style={{color:'#fffafb'}}>&quot;</span></label>
+                <p>Explore the limitless possibilities of technology with our Tech Blog Web App. We are your gateway to discovering the latest trends and innovations, providing a space where you can share insights, explore new horizons, and ultimately thrive. Dive into a world where knowledge is power, and innovation knows no bounds. Join our vibrant community of tech enthusiasts, and embark on a journey where you can discover, explore, share, innovate, and truly thrive in the ever-evolving tech landscape. Welcome to a place where curiosity is rewarded, ideas are exchanged, and the future is shaped by your passion for technology.</p>
+                <span id='sign_cont'>
+                    <span id='sign'>John Doe</span><br/>
+                    <span style={{fontSize:'20px'}}>Founder</span>
+                </span>
+            </section>
+        </div>
+
+        {/* ------------------------------------------------------------------------------------------------- */}
+        <div id='contactus'>
+            <header id='contactus_header'>
+                <span className='rightstroke1'></span>
+                <label>Contact Us</label>
+                <span className='leftstroke1'></span>
+            </header>
+
+            <section id='contactus_info'>
+                <figure id='people_img'>
+                    <img src={conatctpeople} alt={conatctpeople} />
+                    <span></span>
+                </figure>
+                <figure id='contact_img'>
+                    <img src={contactus} alt={contactus} />
+                </figure>
+
+                <label>Contact Us For Query By dropping it below</label>
+                <input type="text" placeholder='enter email'/>
+                <textarea cols="30" rows="10" placeholder='enter query'></textarea>
+                <Button value='Submit'/>
+
+                <label id='contactus_slogan'><span style={{color:'#fffafb'}}>&quot;</span> Get In Touch <span style={{color:'#fffafb'}}>&#33;</span><span style={{color:'#fffafb'}}>&quot;</span></label>
+            </section>
+        </div>
+
+        {/* ------------------------------------------------------------------------------------------------- */}
+        <footer style={{padding:'0.5rem',width:'100%',color:'#B5DF53',fontSize:'18px',textAlign:'center'}}>
+            Copyright @ Bloggite Reserved 2023
+        </footer>
+    </div> 
+
+
+
+#main_cont_home{
+    
+}
+#hero_banner{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    place-items: center;
+    column-gap: 20px;
+    height: calc(100vh - 112px);
+    margin-bottom: 3rem;
+}
+#hero_banner_gif{
+    display: flex;
+    background: linear-gradient(180deg, rgba(18,41,50,1) 23%, rgba(14,14,14,1) 100%) fixed;
+}
+#hero_banner_gif > img{
+   mix-blend-mode: color-dodge;
+   width: 100%;
+}
+#hero_banner_text{
+    display: grid;
+    height: 250px;
+    align-items: center;
+    position: relative;
+    top: 2px;
+    row-gap: 10px;
+}
+#hero_banner_text > header{
+    font-size: 30px;
+    font-weight: 400;
+}
+#hero_banner_text > article{
+    font-size: 16px;
+    font-weight: 200;
+    text-align: justify;
+    word-spacing: 0.3px;
+    line-height: 25px;
+}
+#hero_banner_text > section{
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#hero_banner_text > section > input{
+    box-sizing: border-box;
+    padding: 0.68rem 0 0.68rem 1rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #fffafb;
+    font-size: 16px;
+    width: 100%;
+    color: #122932;
+    font-weight: 600;
+}
+#hero_banner_text > section > input::placeholder{
+    font-weight: bold;
+    font-style: italic;
+    color: #122932;
+    font-size: 16px;
+}
+#hero_banner_text > section > i{
+    position: absolute;
+    right: 5px;
+    top: 3px;
+}
+
+/* ----------------------------------------------------------------------------- */
+#aboutus{
+    position: relative;
+    margin-bottom: 3rem;
+}
+#aboutus_header{
+    position: relative;
+    margin-bottom: 3rem;
+}
+#aboutus_header > label{
+    font-size: 20px;
+    color: #B5DF53;
+    font-weight: 400;
+    border: 3px #fffafb solid;
+    padding: 0.2rem 1rem;
+    border-radius: 3px;
+    position: relative;
+    left: 50px;
+}
+.leftstroke{
+    height: 3px;
+    background-color: #fffafb;
+    position: absolute;
+    width: 52px;
+    top: -6px;
+}
+.rightstroke{
+    height: 3px;
+    background-color: #fffafb;
+    position: absolute;
+    width: calc(100% - 177.67px);
+    top:27px;
+    right: 4px;
+}
+#aboutus_info{
+    position: relative;
+}
+#aboutus_info > label{
+    position: absolute;
+    right: 0;
+    color: #B5DF53;
+    top: 100px;
+    font-size: 50px;
+    font-weight: 600;
+    width: calc(100% - 650px);
+    text-align: center;
+}
+#network_img{
+    display: flex;
+    width: 450px;
+    height: auto;
+}
+#network_img > img{
+    width: 100%;
+}
+#group_img{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 450px;
+    top: 70px;
+}
+#group_img > img{
+    width: 100%;
+    position: relative;
+    z-index: 4;
+}
+#group_img > span{
+    width: 150px;
+    height: 150px;
+    background-color: #CDE3F2;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    z-index: 3;
+}
+#aboutus_info > p{
+    position: absolute;
+    top: 270px;
+    width: calc(100% - 500px);
+    right: 0;
+    text-align: justify;
+    padding: 1rem;
+    word-spacing: 3px;
+    line-height: 30px;
+}
+#sign{
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    color: #B5DF53;
+    font-size: 30px;
+}
+#sign_cont{
+    position: absolute;
+    text-align: center;
+    right: 2rem;
+    bottom: 0;
+}
+/* --------------------------------------------------------------------------- */
+#contactus{
+    position: relative;
+}
+#contactus_header{
+    position: relative;
+    margin-bottom: 3rem;
+    height: 37px;
+}
+#contactus_header > label{
+    font-size: 20px;
+    color: #B5DF53;
+    font-weight: 400;
+    border: 3px #fffafb solid;
+    padding: 0.2rem 1rem;
+    border-radius: 3px;
+    position: absolute;
+    right: 50px;
+}
+.rightstroke1{
+    position: absolute;
+    height: 3px;
+    background-color: #fffafb;
+    width: 52px;
+    right: 0;
+    top: 0;
+}
+.leftstroke1{
+    position: absolute;
+    height: 3px;
+    background-color: #fffafb;
+    width: calc(100% - 196.09px);
+    top: 33px;
+    left: 4px;
+}
+#contactus_info{
+    position: relative;
+}
+#people_img{
+    position: absolute;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    right: 400px;
+    top: 50px;
+}
+#people_img > img{
+    width: 100%;
+    z-index: 4;
+}
+#people_img > span{
+    width: 150px;
+    height: 150px;
+    background-color: #CDE3F2;
+    position: absolute;
+    z-index: 3;
+    top: -6px;
+    right: -6px;
+}
+#contact_img{
+    display: flex;
+    width: 400px;
+    height: auto;
+    position: relative;
+    left: calc(100% - 400px);
+}
+#contact_img > img{
+    width: 100%;
+}
+#contactus_slogan{
+    color: #B5DF53;
+    font-size: 50px;
+    font-weight: 600;
+    width: calc(100% - 650px);
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+--------------------------------header.css-----------------------------------
+ul{
+    margin: 0;
+    padding:0;
+}
+a{
+    padding: 0.23rem 2px;
+}
+li{
+    list-style-type: none;
+    padding: 0.2rem;
+}
+
+#main_cont_navbar_pc{
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-auto-rows: 30px 30px;
+    justify-content: space-between;
+    row-gap: 20px;
+    place-items: center;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    background-color: #122932;
+    z-index: 5;
+}
+#logo_cont{
+    margin: 0;
+    position: relative;
+    bottom: 5px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    left: 10px;
+}
+#logo{
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+}
+#navbar_pc_links{
+    display: grid;
+    grid-template-columns: repeat(5, 90px);
+    width: 450px;
+    align-items: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+#navbar_pc_links > ul{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5,90px);
+    place-items: center;
+    color: #fffafb;
+    
+}
+#navbar_secondary{
+    width: 450px;
+    display: grid;
+    grid-template-columns: repeat(5, 90px);
+    align-items: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+#navbar_secondary > ul{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5,90px);
+    place-items: center; 
+}
+#loginrightstroke{
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background-color: #B5DF53;
+    border-radius: 2px;
+    top: 22px;
+    right: 179px;
+    opacity: 0.8;
+}
+#navbar_bottom_border{
+    width: 100%;
+    height: 1px;
+    background-color: #fffafb;
+    position: absolute;
+    opacity: 0.5;
+    border-radius: 1px;
+    top: 100px;
+}
+.nav_active{
+    border-bottom:1px #B5DF53 solid;
+}
+.sec_nav_active{
+    font-weight: 400 !important;
+    color: #B5DF53;
+}
+
+
+
+-->
